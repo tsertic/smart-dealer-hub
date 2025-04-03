@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Smart Dealer Hub 🚗
 
-## Getting Started
+## Project Description
 
-First, run the development server:
+**Smart Dealer Hub** is a modern admin dashboard designed specifically for car dealerships. The goal is to provide a streamlined, intuitive, and centralized platform to efficiently manage core business operations, including vehicle inventory, sales tracking, customer information, and reporting.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The "Smart" component emphasizes the planned integration of AI capabilities, leveraging the **Google Gemini API**, to offer enhanced insights, automate tasks, and optimize dealership performance.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Key Features (Planned)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Inventory Management:** Add, edit, delete vehicles, manage details (specs, pricing, status), and track stock levels.
+- **Sales Tracking:** Log sales transactions, monitor revenue, and manage deal statuses.
+- **Customer Management:** Basic CRM features to store and manage customer data and interaction history.
+- **Reporting & Analytics:** Generate essential reports on sales, inventory turnover, etc.
+- **AI-Powered Insights (via Gemini API):**
+  - Potential for smart search/filtering of inventory.
+  - Assistance with generating vehicle descriptions.
+  - (Future) Predictive analytics for demand or pricing suggestions.
+- **Clean & Responsive UI:** Built with Shadcn/ui for a modern user experience.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 💻 Tech Stack
 
-## Learn More
+- **Framework:** [Next.js](https://nextjs.org/) (React)
+- **UI Components:** [Shadcn/ui](https://ui.shadcn.com/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **ORM:** [Prisma](https://www.prisma.io/)
+- **Database:** [Specify your DB, e.g., PostgreSQL, MySQL, SQLite]
+- **AI:** [Google Gemini API](https://ai.google.dev/)
+- **Language:** TypeScript
 
-To learn more about Next.js, take a look at the following resources:
+_(Please update the database choice if needed)_
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚀 Getting Started
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1.  **Clone the repository:**
 
-## Deploy on Vercel
+    ```bash
+    git clone [YOUR_REPOSITORY_URL]
+    cd smart-dealer-hub
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2.  **Install dependencies:**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+    ```bash
+    npm install
+    # or
+    yarn install
+    # or
+    pnpm install
+    ```
+
+3.  **Set up environment variables:**
+
+    - Copy the example environment file:
+      ```bash
+      cp .env.example .env
+      ```
+    - Fill in the required values in the `.env` file (Database connection string, Gemini API Key, etc.).
+
+4.  **Set up the database:**
+
+    - Run Prisma migrations to sync your schema with the database:
+      ```bash
+      npx prisma migrate dev
+      ```
+    - (Optional) Seed the database if a seed script is available:
+      ```bash
+      npx prisma db seed
+      ```
+
+5.  **Run the development server:**
+
+    ```bash
+    npm run dev
+    # or
+    yarn dev
+    # or
+    pnpm dev
+    ```
+
+6.  Open [http://localhost:3000](http://localhost:3000) (or your configured port) in your browser.
+
+_(Detailed setup instructions might be expanded later)_
