@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/layout/Footer";
-
+import { ClerkProvider } from "@clerk/nextjs";
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -20,11 +20,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable}`}>
-      <body className="flex flex-col min-h-screen antialiased font-sans">
-        <main className="flex-grow">{children}</main>
-        <Footer />
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en" className={`${inter.variable}`}>
+        <body className="flex flex-col min-h-screen antialiased font-sans">
+          <main className="flex-grow">{children}</main>
+          <Footer />
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
